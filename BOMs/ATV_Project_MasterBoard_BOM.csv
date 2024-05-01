@@ -1,0 +1,24 @@
+Reference,Value,Datasheet,Footprint,Manufacture Part #,Quanity,1x,100x,Cost Per Board
+"C1,C4,C5",1uF,~,Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,08051C104KAT4A,3,$0.11 ,$0.04 ,0.117
+"C2,C3",10uF,~,Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,C0805C106M8PACTU,2,$0.24 ,$0.08 ,0.152
+"D1,JP2",SDA,~,-- mixed values --,TMS-103-02-G-S,2,$0.60 ,$0.37 ,0.74
+"D2,JP4",SCL,~,-- mixed values --,SM0805RC,2,$0.20 ,$0.17 ,0.334
+D3,1N4148,https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf,Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder,1N4148WS-HE3-18,1,$0.23 ,0.067,0.067
+D6,LED,~,Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder,SM0805RC,1,$0.20 ,$0.17 ,0.167
+J1,Program,,Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical,TMS-103-02-G-S,1,$0.60 ,$0.37 ,0.37
+J2,RJ45_Shielded,~,footprint library:RJ45_Shieleded_BB,TMJUTVW0021192448,1,$8.91 ,$8.74 ,8.74
+"J3,J4",RJ9,~,footprint library:RJ11_BB,73306-111LF,2,$1.68 ,$1.29 ,2.58
+J5,PWR IN,,ATVProject_Library:2 Pin Header,TMS-103-02-G-S,1,$0.60 ,$0.37 ,0.37
+JP1,Regulator Bypass,~,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,TMS-103-02-G-S,1,$0.60 ,$0.37 ,0.37
+"R1,R2",4.7K,~,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,CRCW08054K70FKEC,2,$0.11 ,$0.02 ,0.044
+"R3,R4,RN1",10K,-- mixed values --,-- mixed values --,CR0805-FX-1002ELF,3,$0.10 ,$0.01 ,0.024
+"R5,R7,R8,R9,R10,R11,R12,R13,R14,R15,R16,R17,R18,R19,R20,R21",DNS,~,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,,16,$0.10 ,$0.01 ,0.128
+R6,2.2K,~,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,CR0805-FX-2201ELF,1,,,
+RN2,1K,http://www.vishay.com/docs/31509/csc.pdf,Resistor_THT:R_Array_SIP9,CMP0805QFX-1001ELF,1,$0.19 ,$0.06 ,0.059
+SW1,SW_DIP_x08,~,ATVProject_Library:Dip Switch (16 pin),,1,$0.10 ,$0.01 ,0.008
+SW2,SW_Slide_DPDT,~,ATVProject_Library:DPDT Switch,JS202011CQN,1,$0.64 ,$0.48 ,0.48
+U1,PIC16F1788,,ATVProject_Library:PIC1788,PIC16F1788-I/SS,1," 	$2.58",$2.14 ,2.14
+U2,TSB1117,,Package_TO_SOT_SMD:SOT-223-3_TabPin2,TPS7B8333QDCYRQ1W,1,$1.56 ,$1.12 ,1.12
+U3,XBEE_PRO,,ATVProject_Library:Zigby,XBP9B-XCST-001,1,$58.08 ,$58.08 ,58.08
+,,,,,,,,
+,,,,,,Cost Per Board,,76.09
