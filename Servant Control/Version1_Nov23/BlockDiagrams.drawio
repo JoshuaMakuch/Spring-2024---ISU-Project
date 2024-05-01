@@ -1,0 +1,519 @@
+<mxfile host="Electron" modified="2023-11-17T21:37:10.116Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.7.5 Chrome/114.0.5735.289 Electron/25.8.1 Safari/537.36" etag="iMGWAKyx3DoXMeb5jb3G" version="21.7.5" type="device">
+  <diagram name="Page-1" id="q-ZhT2NF2mNTf9VczH7x">
+    <mxGraphModel dx="1032" dy="509" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-5" target="BIDOvvUXQeW1Rd1Ob6P9-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-5" value="Peripheral&lt;br&gt;Controller" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="670" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-6" target="BIDOvvUXQeW1Rd1Ob6P9-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-6" value="Master&amp;nbsp;&lt;br&gt;Controller" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-7" target="BIDOvvUXQeW1Rd1Ob6P9-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-7" value="Wireless Transmit&lt;br&gt;and Receive (Zigbee)&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-8" value="Robot" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-14" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-6" target="BIDOvvUXQeW1Rd1Ob6P9-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="290" as="sourcePoint" />
+            <mxPoint x="450" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-49" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-19" target="BIDOvvUXQeW1Rd1Ob6P9-33">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="510" y="590" />
+              <mxPoint x="510" y="390" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-50" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-19" target="BIDOvvUXQeW1Rd1Ob6P9-30">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="530" y="600" />
+              <mxPoint x="530" y="460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-55" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-19" target="BIDOvvUXQeW1Rd1Ob6P9-54">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="550" y="610" />
+              <mxPoint x="550" y="530" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-56" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-19" target="BIDOvvUXQeW1Rd1Ob6P9-53">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="540" y="620" />
+              <mxPoint x="540" y="620" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-19" value="Peripheral&lt;br&gt;Controller" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="580" width="130" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.046;entryY=0.131;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-20" target="BIDOvvUXQeW1Rd1Ob6P9-19">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="320" y="380" />
+              <mxPoint x="320" y="596" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-20" value="Mode Select" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-35" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-21" target="BIDOvvUXQeW1Rd1Ob6P9-19">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="283" y="460" />
+              <mxPoint x="283" y="620" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-21" value="Shoot &lt;br&gt;(Button 1)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="430" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-23" value="Rev&lt;br&gt;(Button 2)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="510" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-24" value="Button 3" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="590" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-25" value="Button 4" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="670" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-26" value="Button 5" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="750" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-27" value="Button 6" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="830" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-28" value="Down Indicator&lt;br&gt;(CCW Incoder 1)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="670" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-30" value="Mode A" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="430" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-31" value="Up/Down&lt;br&gt;Encoder 1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="910" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-32" value="Right/Left&lt;br&gt;Encoder 2" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="990" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-33" value="Power Indicator" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="360" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-36" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-23" target="BIDOvvUXQeW1Rd1Ob6P9-19">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="460" as="sourcePoint" />
+            <mxPoint x="340" y="660" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="260" y="540" />
+              <mxPoint x="260" y="640" />
+              <mxPoint x="290" y="640" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-37" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.021;entryY=0.653;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-24" target="BIDOvvUXQeW1Rd1Ob6P9-19">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="660" as="sourcePoint" />
+            <mxPoint x="450" y="610" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="250" y="620" />
+              <mxPoint x="250" y="658" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-38" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-25" target="BIDOvvUXQeW1Rd1Ob6P9-19">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="660" as="sourcePoint" />
+            <mxPoint x="340" y="680" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="250" y="700" />
+              <mxPoint x="250" y="670" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-39" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.015;entryY=0.908;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-26" target="BIDOvvUXQeW1Rd1Ob6P9-19">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="760" as="sourcePoint" />
+            <mxPoint x="450" y="710" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="260" y="780" />
+              <mxPoint x="260" y="689" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-40" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.179;entryY=1.025;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-27" target="BIDOvvUXQeW1Rd1Ob6P9-19">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="760" as="sourcePoint" />
+            <mxPoint x="450" y="710" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="370" y="860" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-41" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.395;entryY=1.025;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-31" target="BIDOvvUXQeW1Rd1Ob6P9-19">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="860" as="sourcePoint" />
+            <mxPoint x="400" y="710" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="400" y="940" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-42" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.692;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-32" target="BIDOvvUXQeW1Rd1Ob6P9-19">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="860" as="sourcePoint" />
+            <mxPoint x="450" y="810" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="440" y="1020" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-46" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.frame_corner;dx=10;whiteSpace=wrap;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="277.5" y="197.5" width="50" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-51" value="Right Indicator&lt;br&gt;(CW Incoder 2)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="760" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-52" value="Left Indicator&lt;br&gt;(CCW Incoder 2)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="840" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-53" value="Up Indicator&lt;br&gt;(CW Incoder 1)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="590" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-54" value="Mode B" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="500" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-58" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-19" target="BIDOvvUXQeW1Rd1Ob6P9-28">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="550" as="sourcePoint" />
+            <mxPoint x="450" y="500" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="510" y="640" />
+              <mxPoint x="510" y="685" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-59" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-19" target="BIDOvvUXQeW1Rd1Ob6P9-51">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="650" as="sourcePoint" />
+            <mxPoint x="450" y="600" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="500" y="670" />
+              <mxPoint x="500" y="700" />
+              <mxPoint x="520" y="700" />
+              <mxPoint x="520" y="790" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-60" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.006;entryY=0.628;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-19" target="BIDOvvUXQeW1Rd1Ob6P9-52">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="850" as="sourcePoint" />
+            <mxPoint x="450" y="800" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="490" y="720" />
+              <mxPoint x="490" y="878" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-61" value="LED Indicator 8" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="920" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-62" value="LED Indicator 9" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="990" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-64" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.frame_corner;dx=10;whiteSpace=wrap;rotation=-180;direction=south;flipH=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="180" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-66" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-65" target="BIDOvvUXQeW1Rd1Ob6P9-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-65" value="I2C to and from Master Controller" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="355" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-68" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-72" target="BIDOvvUXQeW1Rd1Ob6P9-86">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="590" y="1450" />
+              <mxPoint x="590" y="1250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-69" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-72" target="BIDOvvUXQeW1Rd1Ob6P9-83">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="600" y="1460" />
+              <mxPoint x="600" y="1320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-70" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-72" target="BIDOvvUXQeW1Rd1Ob6P9-97">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="620" y="1470" />
+              <mxPoint x="620" y="1390" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-71" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-72" target="BIDOvvUXQeW1Rd1Ob6P9-96">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="540" y="1480" />
+              <mxPoint x="540" y="1480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-72" value="Master&lt;br&gt;Controller" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="1440" width="130" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-73" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.046;entryY=0.131;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-74" target="BIDOvvUXQeW1Rd1Ob6P9-72">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="320" y="1240" />
+              <mxPoint x="320" y="1456" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-74" value="Mode Select&lt;br&gt;(Trigger 1)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="1210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-75" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-76" target="BIDOvvUXQeW1Rd1Ob6P9-72">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="283" y="1320" />
+              <mxPoint x="283" y="1480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-76" value="Trigger 2" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="1290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-77" value="Button 1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="1370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-78" value="Button 2" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="1450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-79" value="Button 3" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="1540" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-80" value="Button 4" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="1610" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-81" value="Button 5" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="1690" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-82" value="LED Indicator 5" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="670" y="1530" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-83" value="Mode A" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="670" y="1290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-84" value="Joystick 1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="1770" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-85" value="Joy Stick 2" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="1850" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-86" value="Power Indicator" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="670" y="1220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-87" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-77" target="BIDOvvUXQeW1Rd1Ob6P9-72">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="1320" as="sourcePoint" />
+            <mxPoint x="340" y="1520" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="260" y="1400" />
+              <mxPoint x="260" y="1500" />
+              <mxPoint x="290" y="1500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-88" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.021;entryY=0.653;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-78" target="BIDOvvUXQeW1Rd1Ob6P9-72">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="1520" as="sourcePoint" />
+            <mxPoint x="450" y="1470" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="250" y="1480" />
+              <mxPoint x="250" y="1518" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-89" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-79" target="BIDOvvUXQeW1Rd1Ob6P9-72">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="1520" as="sourcePoint" />
+            <mxPoint x="340" y="1540" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="250" y="1560" />
+              <mxPoint x="250" y="1530" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-90" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.015;entryY=0.908;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-80" target="BIDOvvUXQeW1Rd1Ob6P9-72">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="1620" as="sourcePoint" />
+            <mxPoint x="450" y="1570" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="260" y="1640" />
+              <mxPoint x="260" y="1549" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-91" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.179;entryY=1.025;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-81" target="BIDOvvUXQeW1Rd1Ob6P9-72">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="1620" as="sourcePoint" />
+            <mxPoint x="450" y="1570" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="370" y="1720" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-92" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.395;entryY=1.025;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-84" target="BIDOvvUXQeW1Rd1Ob6P9-72">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="1720" as="sourcePoint" />
+            <mxPoint x="400" y="1570" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="400" y="1800" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-93" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.692;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-85" target="BIDOvvUXQeW1Rd1Ob6P9-72">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="1720" as="sourcePoint" />
+            <mxPoint x="450" y="1670" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="440" y="1880" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-94" value="LED Indicator 6" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="670" y="1620" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-95" value="LED Indicator 7" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="670" y="1700" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-96" value="LED Indicator 4" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="670" y="1450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-97" value="Mode B" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="670" y="1360" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-98" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-72" target="BIDOvvUXQeW1Rd1Ob6P9-82">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="1410" as="sourcePoint" />
+            <mxPoint x="450" y="1360" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="510" y="1500" />
+              <mxPoint x="510" y="1545" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-99" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-72" target="BIDOvvUXQeW1Rd1Ob6P9-94">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="1510" as="sourcePoint" />
+            <mxPoint x="450" y="1460" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="500" y="1530" />
+              <mxPoint x="500" y="1560" />
+              <mxPoint x="520" y="1560" />
+              <mxPoint x="520" y="1650" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-100" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.006;entryY=0.628;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-72" target="BIDOvvUXQeW1Rd1Ob6P9-95">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="1710" as="sourcePoint" />
+            <mxPoint x="450" y="1660" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="490" y="1580" />
+              <mxPoint x="490" y="1738" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-101" value="LED Indicator 8" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="670" y="1780" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-103" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-104" target="BIDOvvUXQeW1Rd1Ob6P9-72">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="388" y="1410" />
+              <mxPoint x="388" y="1410" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-104" value="I2C to and from Peripheral Controller" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="327.5" y="1300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-106" value="Joy Stick 3" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="1930" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-107" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.836;entryY=1.025;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-106" target="BIDOvvUXQeW1Rd1Ob6P9-72">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="1790" as="sourcePoint" />
+            <mxPoint x="450" y="1740" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="460" y="1960" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-108" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="BIDOvvUXQeW1Rd1Ob6P9-104">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="388" y="1440" as="sourcePoint" />
+            <mxPoint x="450" y="1440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-110" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-109" target="BIDOvvUXQeW1Rd1Ob6P9-72">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-109" value="UART to and from&lt;br&gt;Zigbee" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="1300" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-111" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-72" target="BIDOvvUXQeW1Rd1Ob6P9-109">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="1320" as="sourcePoint" />
+            <mxPoint x="520" y="1370" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="415" y="1400" />
+              <mxPoint x="515" y="1400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-112" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.933;exitY=1.014;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="BIDOvvUXQeW1Rd1Ob6P9-72" target="BIDOvvUXQeW1Rd1Ob6P9-101">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="1620" as="sourcePoint" />
+            <mxPoint x="450" y="1570" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="471" y="1810" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-113" value="LED Indicator 10" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="840" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-114" value="LED Indicator 11" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="910" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIDOvvUXQeW1Rd1Ob6P9-115" value="LED Indicator 12" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="990" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

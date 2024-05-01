@@ -1,0 +1,340 @@
+;******************************************************************************
+;                                                                             *
+;    Filename:	    MiniATV_Controller_Master_Code.asm			      *
+;    Date:	    APRIL 2, 2023			                      *
+;    File Version:  2                                                         *
+;    Author:        Joshua Makuch                                             *
+;    Company:       Idaho State University                                    *
+;    Description:   Firmware for runing the Master PIC for the MiniATV	      *
+;		    Controller						      *
+;		                                                              *
+;******************************************************************************
+;******************************************************************************
+;                                                                             *
+;    Revision History:                                                        *
+;	1: Basic setup for the PIC16LF1788. Test program for the dev board    *
+;	   increments portb to indicate that the 1788 was soldered correctly  *
+;	2: This version contains i2c testing code, this is not meant to       *
+;	   represent full functionality. For those who care, it communicates  *
+;	   encoder data across 3 bytes (enc1, enc2, enctotal). It also	      *
+;	   indicates when it has received a write.			      *
+;									      *
+;	    STARTED NOV 17 2023 - CURRENT VERSION IMPLEMENTED		      *
+;                                                                             *
+;******************************************************************************
+	
+
+	LIST	    p=16F1788
+	INCLUDE	    P16F1788.INC
+	INCLUDE	    1788_SETUP.INC
+	
+	; CONFIG1
+; __config 0xEFE4
+ __CONFIG _CONFIG1, _FOSC_INTOSC & _WDTE_OFF & _PWRTE_OFF & _MCLRE_ON & _CP_OFF & _CPD_OFF & _BOREN_OFF & _CLKOUTEN_OFF & _IESO_OFF & _FCMEN_OFF
+; CONFIG2
+; __config 0xFFFF
+ __CONFIG _CONFIG2, _WRT_OFF  & _PLLEN_OFF & _STVREN_ON & _BORV_LO & _LPBOR_OFF & _LVP_ON
+
+    ;suppress "not in bank 0" message,  Found label after column 1,
+    errorlevel -302,-207,-305,-206,-203			
+							
+;******************************************		
+;ORIGIN VECTORS & SETUP
+;******************************************
+		ORG 	H'000'					
+ 		GOTO 	SETUP				;RESET CONDITION GOTO SETUP
+		ORG	H'004'
+		GOTO	INTERUPT
+SETUP
+		CALL	INITIALIZE			;CALLS THE SETUP FILE 1788_SETUP.INC
+		GOTO	MAIN
+;******************************************
+;INTERUPT SERVICE ROUTINE 
+;******************************************
+INTERUPT
+		BANKSEL W_SAVE
+		MOVWF		W_SAVE			;SAVE WORKING REGISTER CONTENTS
+		BANKSEL	STATUS
+		MOVFW		STATUS
+		MOVWF		STATUS_SAVE		;SAVES STATUS REGISTER CONTENTS
+		
+		BANKSEL PIR1				;CHECK FOR I2C INTERRUPT
+		BTFSC		PIR1, SSP1IF		
+		CALL		I2C_RECEIVE
+		BANKSEL PIR1
+		BCF		PIR1, SSP1IF		;CLEAR I2C INTERRUPT FLAG
+		BANKSEL	SSP1BUF
+		MOVFW		SSP1BUF
+		
+		BANKSEL STATUS_SAVE			;RECALL STATUS REGISTER CONTENTS
+		MOVFW		STATUS_SAVE
+		MOVWF		STATUS			;RESTORE STATUS REGISTER CONTENTS
+		BANKSEL W_SAVE				
+		MOVFW		W_SAVE			;RESTORE WORKING REGISTER CONTENTS
+		
+		RETFIE					;RETURN AND RESET INTERRUPT ENABLE BITS
+;******************************************
+;  SUBROUTINES
+;******************************************
+;*** ADDRESSED_BY_MASTER ******************
+ADDRESSED_BY_MASTER
+		
+		BANKSEL PORTB
+		MOVFW		PORTB			;TRANSMIT DATA TO MASTER
+		BANKSEL SSP1BUF
+		MOVWF		SSP1BUF
+		
+		RETURN
+;*** I2C_RECEIVE **************************
+I2C_RECEIVE
+		BANKSEL SSP1CON1
+		BCF		SSP1CON1, CKP		;BEGIN CLOCK STRETCHING
+		
+		BANKSEL SSP1STAT			;IF (RECIEVED A WRITE) THEN:
+		BTFSS		SSP1STAT, R_NOT_W
+		GOTO COND_END_1
+		
+		BANKSEL	SSP1STAT
+		BTFSS		SSP1STAT, D_NOT_A	
+		GOTO COND_ADR
+		BANKSEL TESTING_REG
+		BTFSS		TESTING_REG, 1
+		GOTO COND_1
+		BTFSS		TESTING_REG, 2
+		GOTO COND_2
+		GOTO COND_END
+
+COND_ADR
+		BANKSEL TESTING_REG
+		CLRF		TESTING_REG
+		BANKSEL	ENCODER_1_CNT
+		MOVFW		ENCODER_1_CNT
+		BANKSEL SSP1BUF
+		MOVWF		SSP1BUF
+		GOTO COND_END
+COND_1
+		BANKSEL	ENCODER_2_CNT
+		MOVFW		ENCODER_2_CNT
+		BANKSEL SSP1BUF
+		MOVWF		SSP1BUF
+		BANKSEL TESTING_REG
+		BSF		TESTING_REG, 1
+		GOTO COND_END
+COND_2
+		BANKSEL	PORTB
+		MOVFW		PORTB
+		BANKSEL SSP1BUF
+		MOVWF		SSP1BUF
+		BANKSEL TESTING_REG
+		BSF		TESTING_REG, 2
+		GOTO COND_END
+		
+COND_END_1
+		BANKSEL PORTC
+		BSF		PORTC, 6
+	
+COND_END
+		BANKSEL	SSP1CON1
+		BSF		SSP1CON1, CKP		;STOP CLOCK STRETCHING
+
+;		BANKSEL SSPSTAT				;IF (ADDRESSED BY MASTER & IS A READ) THEN:
+;		BTFSC		SSPSTAT, D_NOT_A	    ;CALL ADDRESSED_BY_MASTER
+;		GOTO END_1_I2C_RECEIVE
+;		BANKSEL SSPSTAT
+;		BTFSS		SSPSTAT, R_NOT_W
+;		GOTO END_1_I2C_RECEIVE
+;		CALL ADDRESSED_BY_MASTER
+;		END_1_I2C_RECEIVE
+		
+		
+;		BANKSEL SSP1STAT
+;		BTFSC		SSP1STAT, BF
+;		GOTO $ - 1
+;		
+;		BANKSEL SSP1CON1
+;		BCF		SSP1CON1, CKP		;BEGIN CLOCK STRETCHING
+;		
+;		MOVLW		0XAA			;TRANSMIT DATA TO MASTER
+;		BANKSEL SSP1BUF
+;		MOVWF		SSP1BUF
+;		
+;		BANKSEL	SSP1CON1
+;		BSF		SSP1CON1, CKP		;STOP CLOCK STRETCHING
+		
+		
+		RETURN	
+;******************************************
+MODE_1_MAIN
+;******************************************
+		BANKSEL SHRT_TRM_REG
+		CLRF		SHRT_TRM_REG
+		MOVFW		ENCODER_2_CNT
+		ADDWF		SHRT_TRM_REG, 1
+		MOVFW		ENCODER_1_CNT
+		ADDWF		SHRT_TRM_REG, 1
+		MOVFW		SHRT_TRM_REG
+		BANKSEL PORTB
+		MOVWF		PORTB
+		
+		GOTO MAIN
+;******************************************
+MODE_2_MAIN
+;******************************************
+		BANKSEL BTN_REG_1
+		MOVFW		BTN_REG_1
+		BANKSEL PORTB
+		MOVWF		PORTB
+		BANKSEL PORTC
+		BCF		PORTC, 6
+		BCF		PORTC, 7
+		
+		GOTO MAIN
+;******************************************
+MAIN
+;******************************************
+		
+		BANKSEL PORTA				;IF (NOT BUTTON 1) THEN:
+		BTFSC		PORTA, 5		    ;CLEAR BUTTON1_INDICATOR (BTN_REG_1 BIT0)
+		BSF		BTN_REG_1, 0		;ELSEIF (BUTTON ) THEN:
+		BTFSS		PORTA, 5		    ;SET BUTTON1_INDICATOR (BTN_REG_1 BIT0)
+		BCF		BTN_REG_1, 0
+		
+		BANKSEL PORTA				;IF (NOT BUTTON 2) THEN:
+		BTFSC		PORTA, 4		    ;CLEAR BUTTON2_INDICATOR (BTN_REG_1 BIT1)
+		BSF		BTN_REG_1, 1		;ELSEIF (BUTTON 2) THEN:
+		BTFSS		PORTA, 4		    ;SET BUTTON2_INDICATOR (BTN_REG_1 BIT1)
+		BCF		BTN_REG_1, 1
+		
+		BANKSEL PORTA				;IF (NOT BUTTON 3) THEN:
+		BTFSC		PORTA, 3		    ;CLEAR BUTTON3_INDICATOR (BTN_REG_1 BIT2)
+		BSF		BTN_REG_1, 2		;ELSEIF (BUTTON 3) THEN:
+		BTFSS		PORTA, 3		    ;SET BUTTON3_INDICATOR (BTN_REG_1 BIT2)
+		BCF		BTN_REG_1, 2
+		
+		BANKSEL PORTA				;IF (NOT BUTTON 4) THEN:
+		BTFSC		PORTA, 2		    ;CLEAR BUTTON4_INDICATOR (BTN_REG_1 BIT3)
+		BSF		BTN_REG_1, 3		;ELSEIF (BUTTON 4) THEN:
+		BTFSS		PORTA, 2		    ;SET BUTTON4_INDICATOR (BTN_REG_1 BIT3)
+		BCF		BTN_REG_1, 3
+		
+		BANKSEL PORTA				;IF (NOT BUTTON 5) THEN:
+		BTFSC		PORTA, 1		    ;CLEAR BUTTON5_INDICATOR (BTN_REG_1 BIT4)
+		BSF		BTN_REG_1, 4		;ELSEIF (BUTTON 5) THEN:
+		BTFSS		PORTA, 1		    ;SET BUTTON5_INDICATOR (BTN_REG_1 BIT4)
+		BCF		BTN_REG_1, 4
+		
+		BANKSEL PORTA				;IF (NOT MODE_SELECT_SWITCH) THEN:
+		BTFSC		PORTA, 0		    ;CLEAR MODE_SELECT_SWITCH_INDICATOR (BTN_REG_1 BIT5)
+		BSF		BTN_REG_1, 5		;ELSEIF (MODE_SELECT_SWITCH) THEN:
+		BTFSS		PORTA, 0		    ;SET MODE_SELECT_SWITCH_INDICATOR (BTN_REG_1 BIT5)
+		BCF		BTN_REG_1, 5
+		
+		BANKSEL PORTC				;IF (NOT ENCODER1_SWITCH) THEN:
+		BTFSC		PORTC, 0		    ;CLEAR ENCODER1_SWITCH_INDICATOR (BTN_REG_1 BIT6)
+		BSF		BTN_REG_1, 6		;ELSEIF (ENCODER1_SWITCH) THEN:
+		BTFSS		PORTC, 0		    ;SET ENCODER1_SWITCH_INDICATOR (BTN_REG_1 BIT6)
+		BCF		BTN_REG_1, 6
+		
+		BANKSEL PORTC				;IF (NOT ENCODER2_SWITCH) THEN:
+		BTFSC		PORTC, 5		    ;CLEAR ENCODER2_SWITCH_INDICATOR (BTN_REG_1 BIT7)
+		BSF		BTN_REG_1, 7		;ELSEIF (ENCODER2_SWITCH) THEN:
+		BTFSS		PORTC, 5		    ;SET ENCODER2_SWITCH_INDICATOR (BTN_REG_1 BIT7)
+		BCF		BTN_REG_1, 7
+		
+		;ENCODER 1
+		BANKSEL INFO_REG_1			;IF (E1_CW_STEP_OCCURED_INDICATOR OR E1_CCW_STEP_OCCURED_INDICATOR) THEN:
+		BTFSC		INFO_REG_1, 7		    ;SKIP EVERYTHING AND CONTINUE ON
+		GOTO END_1				;ELSEIF (A & !B) THEN:
+		BTFSC		INFO_REG_1, 6		    ;SET E1_CW_STEP_OCCURED_INDICATOR
+		GOTO END_1				;ELSEIF (!A & B) THEN:
+		BTFSS		PORTA, 7		    ;SET E1_CCW_STEP_OCCURED_INDICATOR
+		GOTO SEC_CON_1			    
+		BTFSC		PORTA, 6
+		GOTO SEC_CON_1
+		BSF		INFO_REG_1, 7
+		GOTO END_1
+		SEC_CON_1
+		BTFSC		PORTA, 7
+		GOTO END_1
+		BTFSS		PORTA, 6
+		GOTO END_1
+		BSF		INFO_REG_1, 6
+		END_1
+		
+		BANKSEL INFO_REG_1			;IF (E1_CW_STEP_OCCURED_INDICATOR & A & B) THEN:
+		BTFSS		INFO_REG_1, 7		    ;INCREMENT ENCODER 1 COUNT
+		GOTO SEC_CON_2				    ;CLEAR E1_CW_STEP_OCCURED_INDICATOR
+		BTFSS		PORTA, 7		    ;CLEAR E1_CCW_STEP_OCCURED_INDICATOR
+		GOTO SEC_CON_2				;ELSEIF (E1_CCW_STEP_OCCURED_INDICATOR & A & B) THEN:
+		BTFSS		PORTA, 6		    ;DECREMENT ENCODER_1_CNT
+		GOTO SEC_CON_2				    ;CLEAR E1_CW_STEP_OCCURED_INDICATOR
+		INCF		ENCODER_1_CNT, 1	    ;CLEAR E1_CCW_STEP_OCCURED_INDICATOR
+		BCF		INFO_REG_1, 7		;ELSE:
+		BCF		INFO_REG_1, 6		    ;SKIP EVERYTHING AND CONTINUE ON
+		GOTO END_2
+		SEC_CON_2
+		BTFSS		INFO_REG_1, 6
+		GOTO END_2
+		BTFSS		PORTA, 7
+		GOTO END_2
+		BTFSS		PORTA, 6
+		GOTO END_2
+		DECF		ENCODER_1_CNT, 1
+		BCF		INFO_REG_1, 7
+		BCF		INFO_REG_1, 6
+		END_2
+	
+		;ENCODER 2
+		BANKSEL INFO_REG_1			;IF (E1_CW_STEP_OCCURED_INDICATOR OR E1_CCW_STEP_OCCURED_INDICATOR) THEN:
+		BTFSC		INFO_REG_1, 5		    ;SKIP EVERYTHING AND CONTINUE ON
+		GOTO END_3				;ELSEIF (A & !B) THEN:
+		BTFSC		INFO_REG_1, 4 		    ;SET E1_CW_STEP_OCCURED_INDICATOR
+		GOTO END_3				;ELSEIF (!A & B) THEN:
+		BTFSS		PORTC, 2		    ;SET E1_CCW_STEP_OCCURED_INDICATOR
+		GOTO SEC_CON_3			    
+		BTFSC		PORTC, 1
+		GOTO SEC_CON_3
+		BSF		INFO_REG_1, 5 
+		GOTO END_3
+		SEC_CON_3
+		BTFSC		PORTC, 2
+		GOTO END_3
+		BTFSS		PORTC, 1
+		GOTO END_3
+		BSF		INFO_REG_1, 4
+		END_3
+		
+		BANKSEL INFO_REG_1			;IF (E1_CW_STEP_OCCURED_INDICATOR & A & B) THEN:
+		BTFSS		INFO_REG_1, 5		    ;INCREMENT ENCODER 1 COUNT
+		GOTO SEC_CON_4				    ;CLEAR E1_CW_STEP_OCCURED_INDICATOR
+		BTFSS		PORTC, 2		    ;CLEAR E1_CCW_STEP_OCCURED_INDICATOR
+		GOTO SEC_CON_4				;ELSEIF (E1_CCW_STEP_OCCURED_INDICATOR & A & B) THEN:
+		BTFSS		PORTC, 1		    ;DECREMENT ENCODER_1_CNT
+		GOTO SEC_CON_4				    ;CLEAR E1_CW_STEP_OCCURED_INDICATOR
+		INCF		ENCODER_2_CNT, 1	    ;CLEAR E1_CCW_STEP_OCCURED_INDICATOR
+		BCF		INFO_REG_1, 5		;ELSE:
+		BCF		INFO_REG_1, 4		    ;SKIP EVERYTHING AND CONTINUE ON
+		GOTO END_4
+		SEC_CON_4
+		BTFSS		INFO_REG_1, 4
+		GOTO END_4
+		BTFSS		PORTC, 2
+		GOTO END_4
+		BTFSS		PORTC, 1
+		GOTO END_4
+		DECF		ENCODER_2_CNT, 1
+		BCF		INFO_REG_1, 5
+		BCF		INFO_REG_1, 4
+		END_4
+		
+		BANKSEL BTN_REG_1			;IF (!MODE SELECT) THEN:
+		BTFSS		BTN_REG_1, 5		    ;GOTO MODE_1_MAIN
+		GOTO MODE_1_MAIN			;ELSEIF (MODE SELECT) THEN:
+		BANKSEL BTN_REG_1			    ;GOTO MODE_2_MAIN
+		BTFSC		BTN_REG_1, 5
+		GOTO MODE_2_MAIN
+		
+		GOTO	MAIN				;LOOP BACK
+		END
+;********************END PROGRAM DIRECTIVE ***********************************
+;*****************************************************************************
